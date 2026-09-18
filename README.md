@@ -1,1 +1,142 @@
-# Thato-Motus
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thato Motus Sales | Premium Vehicle Dealership</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Thato Motus <span>Sales</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Thato Motus Sales</h1>
+            <p>Quality pre-owned and new vehicles, inspected for performance, luxury, and reliability.</p>
+            <a href="#inventory" class="btn">Explore Inventory</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">Why Choose Thato Motus Sales</h2>
+        <p class="section-subtitle">Comprehensive automotive solutions built on trust and quality</p>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Multi-Point Inspection</h3>
+                <p>Every vehicle on our lot undergoes a rigorous safety and performance verification.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Flexible Financing</h3>
+                <p>Tailored finance options and competitive trade-in valuations suited to your budget.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Extended Warranties</h3>
+                <p>Comprehensive coverage plans designed to give you total peace of mind on every journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="inventory" class="section bg-light">
+        <h2 class="section-title">Featured Inventory</h2>
+        <p class="section-subtitle">Click "Quick View" to inspect full vehicle specifications</p>
+        <div class="grid-3">
+            
+            <div class="card product-card">
+                <img src="images/merc.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80';" alt="Mercedes-Benz A-Class" class="product-img">
+                <div class="product-info">
+                    <h3>Mercedes-Benz A-Class Sport</h3>
+                    <p class="price">R 380,000</p>
+                    <button class="btn" onclick="openVehicleModal(1)">Quick View</button>
+                </div>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/suv.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80';" alt="All-Terrain SUV" class="product-img">
+                <div class="product-info">
+                    <h3>2022 All-Terrain SUV</h3>
+                    <p class="price">R 385,000</p>
+                    <button class="btn" onclick="openVehicleModal(2)">Quick View</button>
+                </div>
+            </div>
+
+            <div class="card product-card">
+                <img src="images/sedan.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80';" alt="Luxury Sedan" class="product-img">
+                <div class="product-info">
+                    <h3>2024 Performance Sedan</h3>
+                    <p class="price">R 620,000</p>
+                    <button class="btn" onclick="openVehicleModal(3)">Quick View</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Book a Test Drive</h2>
+        <p class="section-subtitle">Connect with the Thato Motus Sales team or schedule an appointment</p>
+        <div class="form-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Inquiry / Selected Vehicle</label>
+                    <textarea id="message" rows="4" required placeholder="I would like to schedule a test drive for..."></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="vehicleModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Vehicle Image" class="modal-img">
+                <div class="modal-details">
+                    <h2 id="modalTitle">Vehicle Title</h2>
+                    <p id="modalPrice" class="price">R 0</p>
+                    <p id="modalDescription">Vehicle details...</p>
+                    
+                    <div class="vehicle-specs">
+                        <p><strong>Mileage:</strong> <span id="modalMileage">0 km</span></p>
+                        <p><strong>Transmission:</strong> <span id="modalTransmission">Automatic</span></p>
+                        <p><strong>Fuel Type:</strong> <span id="modalFuel">Petrol</span></p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn" onclick="scheduleDriveFromModal()">Schedule Test Drive</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Thato Motus Sales. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html># Thato-Motus
