@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thato Motus Sales | Premium Vehicle Dealership</title>
+    <meta name="description" content="Mash Derby Supply - Premium replica football jerseys for Mamelodi Sundowns, Orlando Pirates, and Kaizer Chiefs. Order authentic matchday kits today.">
+    <title>Mash Derby Supply | Matchday Apparel & Football Kits</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <div class="logo">Thato Motus <span>Sales</span></div>
+            <div class="logo">⚽ MASH DERBY <span>SUPPLY</span></div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#inventory">Inventory</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#features">The Supply</a></li>
+                    <li><a href="#inventory">Kits</a></li>
+                    <li><a href="#contact">Order</a></li>
                 </ul>
             </nav>
         </div>
@@ -24,63 +25,87 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to Thato Motus Sales</h1>
-            <p>Quality pre-owned and new vehicles, inspected for performance, luxury, and reliability.</p>
-            <a href="#inventory" class="btn">Explore Inventory</a>
+            <span class="hero-badge">🔥 MATCHDAY READY</span>
+            <h1>GEAR UP FOR THE DERBY</h1>
+            <p>High-grade matchday threads for South Africa's most passionate supporters.</p>
+            <a href="#inventory" class="btn btn-hero">Explore Kits</a>
         </div>
     </section>
 
-    <section id="services" class="section">
-        <h2 class="section-title">Why Choose Thato Motus Sales</h2>
-        <p class="section-subtitle">Comprehensive automotive solutions built on trust and quality</p>
+    <section id="features" class="section">
+        <h2 class="section-title">THE DERBY ADVANTAGE</h2>
+        <p class="section-subtitle">Engineered for stadium roar and daily lifestyle wear</p>
         <div class="grid-3">
-            <div class="card">
-                <div class="card-number">01</div>
-                <h3>Multi-Point Inspection</h3>
-                <p>Every vehicle on our lot undergoes a rigorous safety and performance verification.</p>
+            <div class="card feature-card">
+                <div class="card-tag">01</div>
+                <h3>Pro-Match Breathability</h3>
+                <p>High-ventilation mesh weaving keeps you cool in peak matchday pressure.</p>
             </div>
-            <div class="card">
-                <div class="card-number">02</div>
-                <h3>Flexible Financing</h3>
-                <p>Tailored finance options and competitive trade-in valuations suited to your budget.</p>
+            <div class="card feature-card">
+                <div class="card-tag">02</div>
+                <h3>Precision Crest Embroidery</h3>
+                <p>High-density official club crest badges built to endure every celebration.</p>
             </div>
-            <div class="card">
-                <div class="card-number">03</div>
-                <h3>Extended Warranties</h3>
-                <p>Comprehensive coverage plans designed to give you total peace of mind on every journey.</p>
+            <div class="card feature-card">
+                <div class="card-tag">03</div>
+                <h3>Fast SA Express Delivery</h3>
+                <p>Direct courier dispatch across South Africa so you never miss a kickoff.</p>
             </div>
         </div>
     </section>
 
     <section id="inventory" class="section bg-light">
-        <h2 class="section-title">Featured Inventory</h2>
-        <p class="section-subtitle">Click "Quick View" to inspect full vehicle specifications</p>
-        <div class="grid-3">
+        <h2 class="section-title">FEATURED MATCHDAY KITS</h2>
+        <p class="section-subtitle">Search your club or click "Quick View" to inspect details</p>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by team (Sundowns, Pirates, Chiefs)..." onkeyup="filterInventory()">
+        </div>
+
+        <div class="grid-3" id="inventoryGrid">
             
-            <div class="card product-card">
-                <img src="images/merc.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80';" alt="Mercedes-Benz A-Class" class="product-img">
+            <div class="card product-card" data-name="mamelodi sundowns home jersey yellow">
+                <div class="badge-overlay">HOT ITEM</div>
+                <div class="img-wrapper">
+                    <img src="images/Mamelodi sundowns.jpg.jpg" alt="Mamelodi Sundowns home kit" class="product-img">
+                </div>
                 <div class="product-info">
-                    <h3>Mercedes-Benz A-Class Sport</h3>
-                    <p class="price">R 380,000</p>
-                    <button class="btn" onclick="openVehicleModal(1)">Quick View</button>
+                    <h3>Mamelodi Sundowns Home Kit</h3>
+                    <p class="file-tag">mamelodi sundowns.jpg</p>
+                    <div class="product-footer">
+                        <p class="price">R 950</p>
+                        <button class="btn btn-card" onclick="openVehicleModal(1)">Quick View</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="card product-card">
-                <img src="images/suv.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80';" alt="All-Terrain SUV" class="product-img">
+            <div class="card product-card" data-name="orlando pirates home jersey black">
+                <div class="badge-overlay">DERBY CLASSIC</div>
+                <div class="img-wrapper">
+                    <img src="images/Orlando pirates.jpg.jpg" alt="Orlando Pirates home kit" class="product-img">
+                </div>
                 <div class="product-info">
-                    <h3>2022 All-Terrain SUV</h3>
-                    <p class="price">R 385,000</p>
-                    <button class="btn" onclick="openVehicleModal(2)">Quick View</button>
+                    <h3>Orlando Pirates Home Kit</h3>
+                    <p class="file-tag">orlando pirates.jpg</p>
+                    <div class="product-footer">
+                        <p class="price">R 950</p>
+                        <button class="btn btn-card" onclick="openVehicleModal(2)">Quick View</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="card product-card">
-                <img src="images/sedan.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80';" alt="Luxury Sedan" class="product-img">
+            <div class="card product-card" data-name="kaizer chiefs home jersey gold black">
+                <div class="badge-overlay">POPULAR</div>
+                <div class="img-wrapper">
+                    <img src="images/Chiefs.jpg.jpg" alt="Kaizer Chiefs home kit" class="product-img">
+                </div>
                 <div class="product-info">
-                    <h3>2024 Performance Sedan</h3>
-                    <p class="price">R 620,000</p>
-                    <button class="btn" onclick="openVehicleModal(3)">Quick View</button>
+                    <h3>Kaizer Chiefs Home Kit</h3>
+                    <p class="file-tag">chiefs.jpg</p>
+                    <div class="product-footer">
+                        <p class="price">R 950</p>
+                        <button class="btn btn-card" onclick="openVehicleModal(3)">Quick View</button>
+                    </div>
                 </div>
             </div>
 
@@ -88,23 +113,32 @@
     </section>
 
     <section id="contact" class="section">
-        <h2 class="section-title">Book a Test Drive</h2>
-        <p class="section-subtitle">Connect with the Thato Motus Sales team or schedule an appointment</p>
+        <h2 class="section-title">PLACE AN ORDER</h2>
+        <p class="section-subtitle">Order or Enquire at <strong>0673243958</strong></p>
         <div class="form-container">
             <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" required placeholder="John Doe">
+                    <input type="text" id="name" required placeholder="Thato Mkhwebane">
+                    <span class="error-message" id="nameError"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="john@example.com">
+                    <input type="email" id="email" required placeholder="st10484213@rosebankcollege.co.za">
+                    <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="form-group">
-                    <label for="message">Inquiry / Selected Vehicle</label>
-                    <textarea id="message" rows="4" required placeholder="I would like to schedule a test drive for..."></textarea>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required value="0673243958">
+                    <span class="error-message" id="phoneError"></span>
                 </div>
-                <button type="submit" class="btn">Submit Request</button>
+                <div class="form-group">
+                    <label for="message">Order Details / Required Size (S, M, L, XL, XXL)</label>
+                    <textarea id="message" rows="4" required placeholder="I would like to order the Orlando Pirates Home Kit in size L..."></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Order Request</button>
+                <div id="formSuccess" class="success-message"></div>
             </form>
         </div>
     </section>
@@ -113,20 +147,20 @@
         <div class="modal-content">
             <button class="modal-close" id="closeModal">&times;</button>
             <div class="modal-body">
-                <img id="modalImg" src="" alt="Vehicle Image" class="modal-img">
+                <img id="modalImg" src="" alt="Detailed view of selected football kit" class="modal-img">
                 <div class="modal-details">
-                    <h2 id="modalTitle">Vehicle Title</h2>
+                    <h2 id="modalTitle">Kit Title</h2>
                     <p id="modalPrice" class="price">R 0</p>
-                    <p id="modalDescription">Vehicle details...</p>
+                    <p id="modalDescription">Kit description...</p>
                     
                     <div class="vehicle-specs">
-                        <p><strong>Mileage:</strong> <span id="modalMileage">0 km</span></p>
-                        <p><strong>Transmission:</strong> <span id="modalTransmission">Automatic</span></p>
-                        <p><strong>Fuel Type:</strong> <span id="modalFuel">Petrol</span></p>
+                        <p><strong>Sizes:</strong> <span id="modalMileage">S, M, L, XL, XXL</span></p>
+                        <p><strong>Fit Type:</strong> <span id="modalTransmission">Athletic Standard Fit</span></p>
+                        <p><strong>Material:</strong> <span id="modalFuel">100% Breathable Polyester</span></p>
                     </div>
 
                     <div class="modal-actions">
-                        <button class="btn" onclick="scheduleDriveFromModal()">Schedule Test Drive</button>
+                        <button class="btn btn-card" onclick="scheduleDriveFromModal()">Select For Order</button>
                     </div>
                 </div>
             </div>
@@ -134,7 +168,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Thato Motus Sales. All rights reserved.</p>
+        <p>Direct Order Call: <strong>0673243958</strong> | &copy; 2026 Mash Derby Supply (ST10484213). All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
